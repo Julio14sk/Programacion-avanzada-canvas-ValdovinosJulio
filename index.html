@@ -48,7 +48,54 @@
         ctx.fillRect(290,290,150,150);
 
 
-        ctx.lineWidth = 5;        
+        ctx.lineWidth = 5;   
+        ctx.fillStyle = 'red'
+        ctx.beginPath();   
+        ctx.moveTo(195,20);  
+        ctx.lineTo(195,75);
+        ctx.lineTo(135,75);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();   
+        ctx.moveTo(200,20);  
+        ctx.lineTo(200,115);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle = 'purple'
+        ctx.beginPath();
+        ctx.arc(295,150,40,0,2*Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(395,150,40,0,2*Math.PI);
+        ctx.stroke();
+
+        ctx.fillStyle = 'purple'
+        ctx.font = "80px Arial"
+        ctx.fillText("Hola mundo",400,60);
+
+        ctx.strokeStyle = 'blue'
+        ctx.strokeText("Hola mundo",407,58);
+
+        var grd = ctx.createLinearGradient(680,100,3,170);
+        grd.addColorStop(0,'purple');
+        grd.addColorStop(1,'blue');
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(450,100,250,180);
+
+        var grd2 = ctx.createRadialGradient(240,320,5,230,340,50);
+        grd2.addColorStop(0,'red');
+        grd2.addColorStop(1,'black');
+
+        ctx.fillStyle = grd2;
+        ctx.fillRect(150,290,200,100);
+
+        var img=document.getElementById()
 
     </script>
 
